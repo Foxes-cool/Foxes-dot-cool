@@ -1,0 +1,7 @@
+{{ $root := dict
+    "title" "Home"
+    "description" "An api for all your fox image needs"
+-}}
+{{- tpl ( file.Read "templates/start.html.tmpl" ) $root }}
+    <h1>Foxes.cool</h1>
+{{ file.Read "templates/end.html.tmpl" -}}
