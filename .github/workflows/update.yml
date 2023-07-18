@@ -37,7 +37,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: '1.15'
+          go-version: '1.19.3'
 
       - name: Install gomplace
         run: go install github.com/hairyhenderson/gomplate/v4/cmd/gomplate@latest
