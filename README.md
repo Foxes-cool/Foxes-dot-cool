@@ -9,6 +9,7 @@ An api for all your fox image needs
 
 ```sh
 gomplate --input-dir=src/ --output-map='build/{{.in|strings.TrimSuffix ".tmpl" }}'
+cp static/* build
 ```
 
 Now all of the outputed pages are in the `build` directory
