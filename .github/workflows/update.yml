@@ -43,7 +43,7 @@ jobs:
         run: GO111MODULE=on go install github.com/hairyhenderson/gomplate/v4/cmd/gomplate@latest
 
       - name: Build website
-        run: gomplate --input-dir=src/ --output-map='build/{{.in|strings.TrimSuffix ".tmpl" }}' && cp static/* build
+        run: gomplate --input-dir=src/ --output-map='build/{{.in|strings.TrimSuffix ".tmpl" }}' && cp -r static/* build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
