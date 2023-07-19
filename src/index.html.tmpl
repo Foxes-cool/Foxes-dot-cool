@@ -3,5 +3,11 @@
     "description" "An api for all your fox image needs"
 -}}
 {{- tpl ( file.Read "templates/start.html.tmpl" ) $root }}
-    <h1>Foxes.cool</h1>
+    <div id="splash-image">
+        <img src="/images/splash-image.jpg">
+    </div>
+    <div id="splash">
+        <h1>Foxes.cool</h1>
+        <p>An api for all your fox image needs</p>
+    </div>
 {{ file.Read "templates/end.html.tmpl" -}}

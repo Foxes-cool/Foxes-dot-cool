@@ -3,9 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/style.css">
 <title>Foxes - {{.title}}</title>
 {{- if .description }}
 <meta name="description" content="{{.description}}">
 {{ end -}}
 </head>
 <body>
+    <nav id="topnav">
+        <img src="/images/logo.png" alt="Logo" width="48" />
+        <div>
+            <a href="/">Home</a>
+            <a href="/docs">Docs</a>
+            <a href="https://github.com/foxes-cool/foxes-dot-cool">Github</a>
+        </div>
+    </nav>
