@@ -1,6 +1,7 @@
 {{ $root := (toml `
     orange = "#ee893a"
     black = "#0a0b0b"
+    off_black = "#1c1e1f"
     white = "#e8e6e3"
 `) -}}
 
@@ -16,15 +17,16 @@ body {
     background-color: {{$root.black}};
     color: {{$root.white}};
     overflow-x: hidden;
+    font-size: 20px;
 }
 
-#topnav, #topnav div {
+#topnav, #topnav div, .card-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#topnav {
+#topnav, .card-container {
     margin: 1.5em 15%;
 }
 
@@ -72,4 +74,47 @@ a:hover {
     top: 0;
     left: -50%;
     box-shadow: 0 0 15vh 15vh {{$root.black}} inset;
+}
+
+#body {
+    position: absolute;
+    top: 100vh;
+    width: 100%;
+}
+
+.section {
+    text-align: center;
+}
+
+.card-container {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    height: 290px;
+    width: 240px;
+    border-radius: .5em;
+    background-color: {{$root.off_black}};
+    border: {{$root.orange}} solid;
+    border-width: 3px;
+    padding: 15px;
+    text-align: center;
+    transition: width 0.5s, height 0.5s, padding-left 0.5s, padding-right 0.5s, margin 0.5s;
+    margin: 25px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+.card:hover {
+    height: 300px;
+    width: 250px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 20px;
+}
+
+.card svg {
+    fill: {{$root.orange}};
 }
