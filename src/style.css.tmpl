@@ -3,6 +3,9 @@
     black = "#0a0b0b"
     off_black = "#1c1e1f"
     white = "#e8e6e3"
+
+    code = "#414558"
+    code_border = "#252525"
 `) -}}
 
 @font-face {
@@ -117,4 +120,49 @@ a:hover {
 
 .card svg {
     fill: {{$root.orange}};
+}
+
+.card-title {
+    color: {{$root.orange}};
+}
+
+.fold-container {
+    margin: 1.5em 15%;
+    border-radius: .5em;
+    background-color: {{$root.off_black}};
+    border: {{$root.orange}} solid;
+    border-width: 3px;
+    padding: 15px;
+}
+
+.fold-container > hr {
+    border-color: {{$root.orange}};
+    background-color: {{$root.orange}};
+    color: {{$root.orange}};
+}
+
+.fold > input {
+    opacity: 0;
+    position: absolute;
+}
+
+.fold > input:checked + h2 + div {
+    display: none;
+}
+
+.fold > div {
+    display: block;
+    overflow-y: hidden;
+}
+
+.fold > .fold-container {
+    margin: 0;
+}
+
+code {
+    border-radius: 0.3rem;
+    background-color: {{$root.code}};
+    border: 1px solid {{$root.code_border}};
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
 }

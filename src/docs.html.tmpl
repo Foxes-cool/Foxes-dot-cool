@@ -1,0 +1,97 @@
+{{ $root := dict
+    "title" "Docs"
+    "description" "Documentation for your favorate fox api"
+-}}
+{{- tpl ( file.Read "templates/start.html.tmpl" ) $root }}
+    <h1 class="section">Docs</h1>
+    <div class="fold-container">
+        <section class="fold">
+            <input type="checkbox" name="collapse" id="foldable-libraries">
+            <h2>
+                <label for="foldable-libraries">Libraries</label>
+            </h2>
+            <div class="fold-container">
+                <!--
+                <section class="fold">
+                    <input type="checkbox" name="collapse" id="foldable-libraries-node">
+                    <h2>
+                        <label for="foldable-libraries-node">Node.js</label>
+                    </h2>
+                    <div>
+                    </div>
+                </section>
+                <hr>
+                <section class="fold">
+                    <input type="checkbox" name="collapse" id="foldable-libraries-javascript">
+                    <h2>
+                        <label for="foldable-libraries-javascript">Javascript</label>
+                    </h2>
+                    <div>
+                    </div>
+                </section>
+                -->
+            </div>
+        </section>
+        <hr>
+        <section class="fold">
+            <input type="checkbox" name="collapse" id="foldable-manual">
+            <h2>
+                <label for="foldable-manual">Manual</label>
+            </h2>
+            <div>
+                <p>
+                    Foxes.cool, works a little differently than what you are
+                    probably used to. You are probably used to having a rest
+                    api where you make a request to an endpoint and it returns
+                    a url. This is both inefficient, but also demanding on the
+                    servers. If you want to access a random image, you are
+                    going to have to generate the image id yourself. This is
+                    not as complicated as it seams though!
+                <p>
+                <p>
+                    You are first going to want to know how many images there
+                    are for a certain tag. This can be achived by making a
+                    request to <code>https://foxes.cool/counts/{}</code>,
+                    replacing <code>{}</code>, with your tag. For instance
+                    <code>https://foxes.cool/counts/fox</code> returns
+                    <code>{{ tpl ( file.Read "src/counts/fox" ) }}</code>. This
+                    number you can cache for any amount of time you want. I
+                    would cache this number untill midnight utc. There are also
+                    times where images are going to be removed because someone
+                    has made a valid removal. If this happens we will try and
+                    find a backup image to replace the id, so the images you
+                    know will always be the same id. If we are going to loose
+                    an image and dont find a backup we are going to update the
+                    count as soon as we can, but we will remove our image ~5
+                    minuets after utc midnight to give you time to update to
+                    the new count.
+                </p>
+                <p>
+                    Now we have the fun part, actually generating the image
+                    urls. The simplist way to get an id is by doing this
+                    calculation <code>foor(Random*count)</code> or
+                    <code>floor(Random(0, count))</code>. For the first example
+                    this is assuming <code>Random</code> is a random float
+                    between 0 and 1. For the second example the
+                    <code>Random</code> function is assumed to be an excluse
+                    random, meaning <code>count</code> wont ever be a
+                    possibility. Once you have gotten the random id, to get the
+                    image url is pretty simple, you just do
+                    <code>https://img.foxes.cool/{tag}/{id}.jpg</code>. In this
+                    example <code>{}</code> is made to signalfy a variable. Do
+                    note that your id needs to be calculated the way above and
+                    you wont nessisarily be able to transfer this id to another
+                    tag. You will need to probably generate a new id for a
+                    different tag.
+                </p>
+            </div>
+        </section>
+    </div>
+    <h2 class="section">Tags</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3 class="card-title">Fox</h3>
+            <code>{{ tpl ( file.Read "src/counts/fox" ) }}</code> images
+        </div>
+    </div>
+{{ file.Read "templates/end.html.tmpl" -}}
