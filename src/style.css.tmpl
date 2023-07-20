@@ -95,7 +95,7 @@ a:hover {
 }
 
 .card {
-    height: 290px;
+    min-height: 290px;
     width: 240px;
     border-radius: .5em;
     background-color: {{$root.off_black}};
@@ -103,7 +103,7 @@ a:hover {
     border-width: 3px;
     padding: 15px;
     text-align: center;
-    transition: width 0.5s, height 0.5s, padding-left 0.5s, padding-right 0.5s, margin 0.5s;
+    transition: width 0.5s, min-height 0.5s, padding-left 0.5s, padding-right 0.5s, margin 0.5s;
     margin: 25px;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -111,7 +111,7 @@ a:hover {
 }
 
 .card:hover {
-    height: 300px;
+    min-height: 300px;
     width: 250px;
     padding-left: 20px;
     padding-right: 20px;
