@@ -11,20 +11,43 @@
                 <label for="foldable-libraries">Libraries</label>
             </h2>
             <div class="fold-container">
+                <section class="fold">
+                    <input type="checkbox" name="collapse" id="foldable-libraries-javascript">
+                    <h2>
+                        <label for="foldable-libraries-javascript">Javascript (Web)</label>
+                    </h2>
+                    <div>
+                        <p>
+                            To enable the api for the web is pretty simple. You
+                            can either download <a
+                            href="https://github.com/Foxes-cool/Foxes-Javascript/blob/main/dist/foxes.min.js">
+                            https://github.com/Foxes-cool/Foxes-Javascript/blob/main/dist/foxes.min.js
+                            </a>, or you can enable the api by adding this to
+                            your header section
+                            <br>
+                            <code>
+                            &lt;script src="https://cdn.jsdelivr.net/gh/Foxes-cool/Foxes-Javascript/dist/foxes.min.js"&gt;&lt;/script&gt;
+                            </code>
+                        </p>
+                        <p>
+                            Once you have enabled the library you will have
+                            access to all of the tags without doing any of the
+                            manual work. You can use them by for example doing
+                            <code>foxes.fox()</code>, it will return something
+                            like <code>https://img.foxes.cool/fox/0.jpg</code>.
+                            The syntax is <code>foxes.{tag}()</code>, to find
+                            the tags just scroll down and you will see them. Do
+                            note that in the javascript library all the names
+                            start with a lowercase.
+                        </p>
+                    </div>
+                </section>
                 <!--
+                <hr>
                 <section class="fold">
                     <input type="checkbox" name="collapse" id="foldable-libraries-node">
                     <h2>
                         <label for="foldable-libraries-node">Node.js</label>
-                    </h2>
-                    <div>
-                    </div>
-                </section>
-                <hr>
-                <section class="fold">
-                    <input type="checkbox" name="collapse" id="foldable-libraries-javascript">
-                    <h2>
-                        <label for="foldable-libraries-javascript">Javascript</label>
                     </h2>
                     <div>
                     </div>
