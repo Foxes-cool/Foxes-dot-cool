@@ -1,6 +1,6 @@
 {{ $root := dict
     "title" "Docs"
-    "description" "Documentation for your favorate fox api"
+    "description" "Documentation for your favorite fox API"
 -}}
 {{- tpl ( file.Read "templates/start.html.tmpl" ) $root }}
     <h1 class="section">Docs</h1>
@@ -18,11 +18,11 @@
                     </h2>
                     <div>
                         <p>
-                            To enable the api for the web is pretty simple. You
+                            To enable the API for the web is pretty simple. You
                             can either download <a
                             href="https://github.com/Foxes-cool/Foxes-Javascript/blob/main/dist/foxes.min.js">
                             https://github.com/Foxes-cool/Foxes-Javascript/blob/main/dist/foxes.min.js
-                            </a>, or you can enable the api by adding this to
+                            </a>, or you can enable the API by adding this to
                             your header section
                             <br>
                             <code>
@@ -65,45 +65,45 @@
                 <p>
                     Foxes.cool, works a little differently than what you are
                     probably used to. You are probably used to having a rest
-                    api where you make a request to an endpoint and it returns
-                    a url. This is both inefficient, but also demanding on the
+                    API where you make a request to an endpoint and it returns
+                    a URL. This is both inefficient, but also demanding on the
                     servers. If you want to access a random image, you are
                     going to have to generate the image id yourself. This is
                     not as complicated as it seams though!
                 <p>
                 <p>
                     You are first going to want to know how many images there
-                    are for a certain tag. This can be achived by making a
+                    are for a certain tag. This can be achieved by making a
                     request to <code>https://foxes.cool/counts/{}</code>,
                     replacing <code>{}</code>, with your tag. For instance
                     <code>https://foxes.cool/counts/fox</code> returns
                     <code>{{ tpl ( file.Read "src/counts/fox" ) }}</code>. This
                     number you can cache for any amount of time you want. I
-                    would cache this number untill midnight utc. There are also
+                    would cache this number until midnight UTC. There are also
                     times where images are going to be removed because someone
                     has made a valid removal. If this happens we will try and
                     find a backup image to replace the id, so the images you
                     know will always be the same id. If we are going to loose
-                    an image and dont find a backup we are going to update the
+                    an image and don't find a backup we are going to update the
                     count as soon as we can, but we will remove our image ~5
-                    minuets after utc midnight to give you time to update to
+                    minuets after UTC midnight to give you time to update to
                     the new count.
                 </p>
                 <p>
                     Now we have the fun part, actually generating the image
-                    urls. The simplist way to get an id is by doing this
-                    calculation <code>foor(Random*count)</code> or
+                    URLs. The simplest way to get an id is by doing this
+                    calculation <code>floor(Random*count)</code> or
                     <code>floor(Random(0, count))</code>. For the first example
                     this is assuming <code>Random</code> is a random float
                     between 0 and 1. For the second example the
-                    <code>Random</code> function is assumed to be an excluse
+                    <code>Random</code> function is assumed to be an exclusive
                     random, meaning <code>count</code> wont ever be a
                     possibility. Once you have gotten the random id, to get the
-                    image url is pretty simple, you just do
+                    image URL is pretty simple, you just do
                     <code>https://img.foxes.cool/{tag}/{id}.jpg</code>. In this
-                    example <code>{}</code> is made to signalfy a variable. Do
+                    example <code>{}</code> is made to signify a variable. Do
                     note that your id needs to be calculated the way above and
-                    you wont nessisarily be able to transfer this id to another
+                    you wont necessarily be able to transfer this id to another
                     tag. You will need to probably generate a new id for a
                     different tag.
                 </p>

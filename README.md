@@ -1,5 +1,5 @@
 # [foxes.cool](https://foxes.cool) source code
-An api for all your fox image needs
+An API for all your fox image needs
 
 ## Requirements
 
@@ -12,5 +12,5 @@ gomplate --input-dir=src/ --output-map='build/{{.in|strings.TrimSuffix ".tmpl" }
 cp -r static/* build
 ```
 
-Now all of the outputed pages are in the `build` directory
+Now all of the outputted pages are in the `build` directory
 
