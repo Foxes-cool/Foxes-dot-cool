@@ -54,22 +54,16 @@
                             either width or height will be 150px but not both.
                         </p>
                         <p>
-                            The main configuration has the following parameters
+                            For details about what each of the following do is
+                            in the <b>Image Manipulation</b> section, here is
+                            how each of the following would be set:
                             <ul>
-                                <li><code>width</code> - This is the <b>max</b>
-                                width for the image. You will set this by just
-                                setting it to a number. Example: <code>width:
-                                150</code></li>
-                                <li><code>height</code> - This is the exact
-                                same as width but for height. Example:
+                                <li><code>Width</code> -
+                                <code>width: 150</code></li>
+                                <li><code>Height</code> -
                                 <code>height: 150</code></li>
-                                <li><code>aspect_ratio</code> - This will set
-                                the aspect ratio. The value that is expected is
-                                a string in the format of <code>{width}:{height}
-                                </code>. Do note that this does not stretch the
-                                image and will crop the image to make it fit the
-                                desired aspect ratio. Example:
-                                <code>aspect_ratio: "16:9"</code></li>
+                                <li><code>Aspect ratio</code> -
+                                <code>aspect_ratio: "1:2"</code></li>
                             </ul>
                         </p>
                     </div>
@@ -102,7 +96,7 @@
                     servers. If you want to access a random image, you are
                     going to have to generate the image id yourself. This is
                     not as complicated as it seams though!
-                <p>
+                </p>
                 <p>
                     You are first going to want to know how many images there
                     are for a certain tag. This can be achieved by making a
@@ -141,17 +135,43 @@
                 </p>
                 <p>
                     There is support for real time image manipulation. These can
-                    be controlled by URL parameters like <code>width</code>,
-                    <code>height</code>, and <code>aspect_ratio</code>. An
-                    example URL would be
+                    be controlled by URL parameters like <code>width</code> and
+                    <code>height</code>. An example URL would be
                     <code>https://img.foxes.cool/fox/0.jpg?width=150&height=150</code>
-                    , this would set the max width and height to be 150px. Width
-                    and height is going to be the <b>max</b> a image can be,
-                    while preserving aspect ratio. The <code>aspect_ratio</code>
-                    parameter is controlled in the format of <code>
-                    {width}:{height}</code>. Do note that <code>aspect_ratio
-                    </code>, will crop the image to be the desired aspect ratio
-                    and will not stretch the image.
+                    , this would set the max width and height to be 150px. For
+                    details about all of the things you can do please look in
+                    the <b>Image Manipulation</b> section. This is how you use
+                    each of them though:</p>
+                    <ul>
+                        <li><code>Width</code> - <code>width=150</code></li>
+                        <li><code>Height</code> - <code>height=150</code></li>
+                        <li><code>Aspect ratio</code> -
+                        <code>aspect_ratio=1:2</code></li>
+                    </ul>
+            </div>
+        </section>
+        <hr>
+        <section class="fold">
+            <input type="checkbox" name="collapse" id="foldable-image">
+            <h2>
+                <label for="foldable-image">Image Manipulation</label>
+            </h2>
+            <div>
+                <p>
+                    <ul>
+                        <li><code>Width</code> - This is the <b>max</b>
+                        width for the image. This is always going to be a
+                        number with the size in pixels.</li>
+                        <li><code>Height</code> - This is the exact
+                        same as width but for height.</li>
+                        <li><code>Aspect ratio</code> - This will set
+                        the aspect ratio. The value that is expected is
+                        a string in the format of
+                        <code>"{width}:{height}"</code>.
+                        Do note that this does not stretch the
+                        image and will crop the image to make it fit the
+                        desired aspect ratio.</li>
+                    </ul>
                 </p>
             </div>
         </section>
