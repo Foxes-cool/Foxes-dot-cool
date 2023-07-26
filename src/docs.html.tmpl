@@ -40,6 +40,38 @@
                             note that in the javascript library all the names
                             start with a lowercase.
                         </p>
+                        <p>
+                            You can have do some realtime image manipulation by
+                            adding an options as the first parameter to the
+                            function. An example would be like
+                            <code>foxes.fox({width: 150})</code>, this will
+                            generate a random image that has a max width of
+                            150px. You can string multiple of them by doing
+                            <code>foxes.fox({width: 150, height: 150})</code>,
+                            this will get a random image that has a max width
+                            of 150px and max height of 150px. Note this will
+                            preserve aspect ratio so it is very likly that
+                            either width or height will be 150px but not both.
+                        </p>
+                        <p>
+                            The main configuration has the following parameters
+                            <ul>
+                                <li><code>width</code> - This is the <b>max</b>
+                                width for the image. You will set this by just
+                                setting it to a number. Example: <code>width:
+                                150</code></li>
+                                <li><code>height</code> - This is the exact
+                                same as width but for height. Example:
+                                <code>height: 150</code></li>
+                                <li><code>aspect_ratio</code> - This will set
+                                the aspect ratio. The value that is expected is
+                                a string in the format of <code>{width}:{height}
+                                </code>. Do note that this does not stretch the
+                                image and will crop the image to make it fit the
+                                desired aspect ratio. Example:
+                                <code>aspect_ratio: "16:9"</code></li>
+                            </ul>
+                        </p>
                     </div>
                 </section>
                 <!--
@@ -106,6 +138,20 @@
                     you wont necessarily be able to transfer this id to another
                     tag. You will need to probably generate a new id for a
                     different tag.
+                </p>
+                <p>
+                    There is support for realtime image manipulation. These can
+                    be controlled by url parameters like <code>width</code>,
+                    <code>height</code>, and <code>aspect_ratio</code>. An
+                    example url would be
+                    <code>https://img.foxes.cool/fox/0.jpg?width=150&height=150</code>
+                    , this would set the max width and height to be 150px. Width
+                    and height is going to be the <b>max</b> a image can be,
+                    while preserving aspect ratio. The <code>aspect_ratio</code>
+                    parameter is controlled in the format of <code>
+                    {width}:{height}</code>. Do note that <code>aspect_ratio
+                    </code>, will crop the image to be the desired aspect ratio
+                    and will not stretch the image.
                 </p>
             </div>
         </section>
