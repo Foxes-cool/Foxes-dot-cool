@@ -68,17 +68,142 @@
                         </p>
                     </div>
                 </section>
-                <!--
                 <hr>
                 <section class="fold">
-                    <input type="checkbox" name="collapse" id="foldable-libraries-node">
+                    <input type="checkbox" name="collapse" id="foldable-libraries-javascript">
                     <h2>
-                        <label for="foldable-libraries-node">Node.js</label>
+                        <label for="foldable-libraries-javascript">Javascript/Typescript (Node.js, Deno, Bun, CoffeeScript)</label>
                     </h2>
-                    <div>
+                    <div class="fold-container">
+                        <section class="fold">
+                            <input type="checkbox" name="collapse" id="foldable-libraries-js-bun">
+                            <h2>
+                                <label for="foldable-libraries-js-bun">Bun</label>
+                            </h2>
+                            <div>
+                                To install the <code>foxes.cool</code> library
+                                you just do <code>npm i foxes.cool</code>. Now
+                                anywhere in your project you can do
+                                <code>const foxes = require("foxes.cool");</code>.
+                                To see how to use this look under the <b>Usage
+                                </b> section.
+                            </div>
+                        </section>
+                        <hr>
+                        <section class="fold">
+                            <input type="checkbox" name="collapse" id="foldable-libraries-js-coffeescript">
+                            <h2>
+                                <label for="foldable-libraries-js-coffeescript">CoffeeScript</label>
+                            </h2>
+                            <div>
+                                To install the <code>foxes.cool</code> library
+                                you just do <code>npm i foxes.cool</code>. Now
+                                anywhere in your project you can do
+                                <code>foxes = require "foxes.cool";</code>.
+                                To see how to use this look under the <b>Usage
+                                </b> section. Do remember that you are
+                                automatically placed in async so you dont need
+                                to do the async function boiler plate. You also
+                                need to remove all the <code>;</code>.
+                            </div>
+                        </section>
+                        <hr>
+                        <section class="fold">
+                            <input type="checkbox" name="collapse" id="foldable-libraries-js-deno">
+                            <h2>
+                                <label for="foldable-libraries-js-deno">Deno</label>
+                            </h2>
+                            <div>
+                                To install the <code>foxes.cool</code> library
+                                you just add
+                                <code>import foxes from "https://deno.land/x/foxes@1.0.0/deno.ts";</code>
+                                to the top of your file or use any other way you
+                                want to import that library. To see how to use
+                                this look under the <b>Usage</b> section.
+                            </div>
+                        </section>
+                        <hr>
+                        <section class="fold">
+                            <input type="checkbox" name="collapse" id="foldable-libraries-js-node">
+                            <h2>
+                                <label for="foldable-libraries-js-node">Node.js</label>
+                            </h2>
+                            <div>
+                                To install the <code>foxes.cool</code> library
+                                you just do <code>npm i foxes.cool</code>. Now
+                                anywhere in your project you can do
+                                <code>const foxes = require("foxes.cool");</code>.
+                                To see how to use this look under the <b>Usage
+                                </b> section.
+                            </div>
+                        </section>
+                        <hr>
+                        <section class="fold">
+                            <input type="checkbox" name="collapse" id="foldable-libraries-js-typescript">
+                            <h2>
+                                <label for="foldable-libraries-js-typescript">Typescript</label>
+                            </h2>
+                            <div>
+                                To install the <code>foxes.cool</code> library
+                                you just do <code>npm i foxes.cool</code>. Now
+                                anywhere in your project you can do
+                                <code>const foxes = require("foxes.cool");</code>.
+                                To see how to use this look under the <b>Usage
+                                </b> section.
+                            </div>
+                        </section>
+                        <hr>
+                        <section class="fold">
+                            <input type="checkbox" name="collapse" id="foldable-libraries-js-usage">
+                            <h2>
+                                <label for="foldable-libraries-js-usage">Usage</label>
+                            </h2>
+                            <div>
+                                <p>
+                                    Once you have added your <code>foxes</code>
+                                    variable you are able to request for all of the
+                                    images through a simple api. The syntax for
+                                    requesting an image is
+                                    <code>await foxes.{tag}()</code>, an example is
+                                    <code>await foxes.fox()</code>. To see all of
+                                    the tags you can scroll down. Do note that all
+                                    of the names start with a lowercase letter. This
+                                    will return a url like
+                                    <code>https://img.foxes.cool/fox/0.jpg</code>.
+                                </p>
+                                <p>
+                                    To use image manipulation, you are going to add
+                                    an object as the first parameter. This will look
+                                    like
+                                    <code>await foxes.fox({width: 150, height: 150})</code>
+                                    and this will return something like
+                                    <code>https://img.foxes.cool/fox/0.jpg?width=150&height=150</code>.
+                                    To see details about all of the arguments look
+                                    inside the <b>Image Manipulation</b> section.
+                                    This is how you set each of the parameters:
+                                    <ul>
+                                        <li><code>Width</code> -
+                                        <code>width: 150</code></li>
+                                        <li><code>Height</code> -
+                                        <code>height: 150</code></li>
+                                        <li><code>Aspect ratio</code> -
+                                        <code>aspect_ratio: "1:2"</code></li>
+                                    </ul>
+                                    If you want to see an example in your
+                                    respective language please look inside the
+                                    <a
+                                    href="https://github.com/Foxes-cool/Foxes-Javascript/tree/main/example"
+                                    >Foxes-Javascript/example</a> folder in
+                                    github. Do note that the first line might
+                                    be a little different than what was told of
+                                    you to do in this document. Please do what
+                                    this document says over what is in thoes
+                                    files.
+                                </p>
+                            </div>
+                        </section>
                     </div>
                 </section>
-                -->
             </div>
         </section>
         <hr>
