@@ -29,8 +29,10 @@ body {
     align-items: center;
 }
 
-#topnav, .card-container {
-    margin: 1.5em 15%;
+@media (min-width: 600px) {
+    #topnav, .card-container, .fold-container {
+        margin: 1.5em 15%;
+    }
 }
 
 #topnav a {
@@ -128,7 +130,6 @@ a:hover, .fold h2 > label:hover {
 }
 
 .fold-container {
-    margin: 1.5em 15%;
     border-radius: .5em;
     background-color: {{$root.off_black}};
     border: {{$root.orange}} solid;
@@ -166,4 +167,5 @@ code {
     border: 1px solid {{$root.code_border}};
     padding-left: 0.2rem;
     padding-right: 0.2rem;
+    white-space: nowrap;
 }
