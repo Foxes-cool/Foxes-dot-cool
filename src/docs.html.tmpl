@@ -260,8 +260,8 @@
                         </p>
                         <p>
                             To use <code>foxes</code> anywhere in your code you
-                            can do <code>foxes::{tag}()</code>, an example would
-                            be <code>foxes::fox()</code>, to see all of the tags
+                            can do <code>foxes::{tag}()?</code>, an example would
+                            be <code>foxes::fox()?</code>, to see all of the tags
                             scroll down, do note that the names all start with
                             a lowercase letter. This will return a URL like
                             <code>https://img.foxes.cool/fox/0.jpg</code>
@@ -269,7 +269,7 @@
                         <p>
                             To use the image manipulation you can add a function
                             after your main function call, an example is
-                            <code>foxes::fox().width(150).height(150)</code>.
+                            <code>foxes::fox()?.width(150).height(150)</code>.
                             This will return a link like
                             <code>https://img.foxes.cool/fox/0.jpg?width=150&height=150</code>
                             For details about what each of the following do is
