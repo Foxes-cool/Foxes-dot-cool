@@ -12,6 +12,54 @@
             </h2>
             <div class="fold-container">
                 <section class="fold">
+                    <input type="checkbox" name="collapse" id="foldable-libraries-c">
+                    <h2>
+                        <label for="foldable-libraries-c">C/C++</label>
+                    </h2>
+                    <div>
+                        <p>
+                            To add <code>foxes</code> to your project you
+                            need to git clone or add as a submodule
+                            <code>https://github.com/Foxes-cool/Foxes-C</code>.
+                            At the top of your code you can add
+                            <code>#include "./Foxes-C/foxes.h"</code> (this
+                            could be different depending on where your
+                            <code>.h</code> file is).
+                        </p>
+                        <p>
+                            To use <code>foxes</code> anywhere in your code you
+                            can do <code>foxes_{tag}((foxes_options){})</code>,
+                            example would be
+                            <code>foxes_fox((foxes_options){})</code>, to see
+                            all of the tags scroll down. This will return a URL
+                            like <code>https://img.foxes.cool/fox/0.jpg</code>.
+                            Do note that if you want to prevent memory leaks you
+                            need to free the url that comes out of this
+                            function.
+                        </p>
+                        <p>
+                            To use the image manipulation you can add add some
+                            fields in your <code>foxes_options</code> struct, an
+                            example is
+                            <code>foxes_fox((foxes_options){.width = 150, .height = 150})</code>.
+                            This will return a link like
+                            <code>https://img.foxes.cool/fox/0.jpg?width=150&height=150</code>
+                            For details about what each of the following do is
+                            in the <b>Image Manipulation</b> section, here is
+                            how each of the following would be set:
+                            <ul>
+                                <li><code>Width</code> -
+                                <code>.width = 150</code></li>
+                                <li><code>Height</code> -
+                                <code>.height = 150</code></li>
+                                <li><code>Aspect ratio</code> -
+                                <code>.aspectRatio = (char*) "1:2"</code></li>
+                            </ul>
+                        </p>
+                    </div>
+                </section>
+                <hr>
+                <section class="fold">
                     <input type="checkbox" name="collapse" id="foldable-libraries-go">
                     <h2>
                         <label for="foldable-libraries-go">Go</label>
