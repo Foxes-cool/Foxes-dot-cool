@@ -38,7 +38,7 @@
                             function.
                         </p>
                         <p>
-                            To use the image manipulation you can add add some
+                            To use the image manipulation you can add some
                             fields in your <code>foxes_options</code> struct, an
                             example is
                             <code>foxes_fox((foxes_options){.width = 150, .height = 150})</code>.
@@ -54,6 +54,50 @@
                                 <code>.height = 150</code></li>
                                 <li><code>Aspect ratio</code> -
                                 <code>.aspectRatio = (char*) "1:2"</code></li>
+                            </ul>
+                        </p>
+                    </div>
+                </section>
+                <hr>
+                <section class="fold">
+                    <input type="checkbox" name="collapse" id="foldable-libraries-cli">
+                    <h2>
+                        <label for="foldable-libraries-cli">Cli (shell scripting)</label>
+                    </h2>
+                    <div>
+                        <p>
+                            To add the <code>foxes</code> cli program you need
+                            to do run
+                            <code>
+                            git clone https://github.com/Foxes-cool/Foxes-Cli
+                            cd Foxes-Cli
+                            make
+                            sudo make install
+                            </code>
+                        </p>
+                        <p>
+                            To use <code>foxes</code> in your shell scripts and
+                            in the cli you can do <code>foxes {tag}</code>, an
+                            example would be <code>foxes fox</code>. This will
+                            return a URL like
+                            <code>https://img.foxes.cool/fox/0.jpg</code>.
+                        </p>
+                        <p>
+                            To use the image manipulation you can add some cli
+                            fields, example is
+                            <code>foxes -w 150 -h 150 fox</code>.
+                            This will return a link like
+                            <code>https://img.foxes.cool/fox/0.jpg?width=150&height=150</code>
+                            For details about what each of the following do is
+                            in the <b>Image Manipulation</b> section, here is
+                            how each of the following would be set:
+                            <ul>
+                                <li><code>Width</code> -
+                                <code>-w 150</code></li>
+                                <li><code>Height</code> -
+                                <code>-h 150</code></li>
+                                <li><code>Aspect ratio</code> -
+                                <code>-r "1:2"</code></li>
                             </ul>
                         </p>
                     </div>
