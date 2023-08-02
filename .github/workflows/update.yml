@@ -49,7 +49,7 @@ jobs:
         run: git clone https://github.com/tdewolff/minify && cd minify/cmd/minify && GO111MODULE=on go install && cd ../../..
 
       - name: Minify site
-        run: minify -r -o minified/ build
+        run: minify -ras -o minified/ build/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
