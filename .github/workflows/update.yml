@@ -46,7 +46,7 @@ jobs:
         run: gomplate --input-dir=src/ --output-map='build/{{.in|strings.TrimSuffix ".tmpl" }}' && cp -r static/* build
 
       - name: Install minify
-        run: GO111MODULE=on go install github.com/tdewolff/minify/cmd/minify@latest
+        run: git clone https://github.com/tdewolff/minify && cd minify/cmd/minify && GO111MODULE=on go install && cd ../../..
 
       - name: Minify site
         run: minify -r -o minified/ build
