@@ -147,6 +147,50 @@
                 </section>
                 <hr>
                 <section class="fold">
+                    <input type="checkbox" name="collapse" id="foldable-libraries-java">
+                    <h2>
+                        <label for="foldable-libraries-java">Java/Kotlin</label>
+                    </h2>
+                    <div>
+                        <p>
+                            To add <code>Foxes</code> to your project please
+                            install the
+                            <a href="https://jitpack.io/#Foxes-cool/Foxes-Java/1.0.1/#howto">JitPack</a>
+                            package, this should provide you the exact code
+                            to add to your configuration files. Inside your code
+                            you can import it by doing
+                            <code>import cool.foxes.Foxes;</code>.
+                        </p>
+                        <p>
+                            To use <code>Foxes</code> anywhere in your code you
+                            can do <code>Foxes.{tag}(Foxes.Options())</code>, an
+                            example would be
+                            <code>Foxes.Fox(Foxes.Options())</code>, to see all
+                            of the tags scroll down. This will return a URL like
+                            <code>https://img.foxes.cool/fox/0.jpg</code>
+                        </p>
+                        <p>
+                            To use the image manipulation you can add a function
+                            after your main function call, an example is
+                            <code>Foxes.Fox(Foxes.Options().Width(150).Height(150))</code>.
+                            This will return a link like
+                            <code>https://img.foxes.cool/fox/0.jpg?width=150&height=150</code>
+                            For details about what each of the following do is
+                            in the <b>Image Manipulation</b> section, here is
+                            how each of the following would be set:
+                            <ul>
+                                <li><code>Width</code> -
+                                <code>.Width(150)</code></li>
+                                <li><code>Height</code> -
+                                <code>.Height(150)</code></li>
+                                <li><code>Aspect ratio</code> -
+                                <code>.AspectRatio("1:2")</code></li>
+                            </ul>
+                        </p>
+                    </div>
+                </section>
+                <hr>
+                <section class="fold">
                     <input type="checkbox" name="collapse" id="foldable-libraries-web">
                     <h2>
                         <label for="foldable-libraries-web">JavaScript (Web)</label>
