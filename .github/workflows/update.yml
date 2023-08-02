@@ -45,11 +45,17 @@ jobs:
       - name: Build website
         run: gomplate --input-dir=src/ --output-map='build/{{.in|strings.TrimSuffix ".tmpl" }}' && cp -r static/* build
 
+      - name: Install minify
+        run: GO111MODULE=on go install github.com/tdewolff/minify/cmd/minify@latest
+
+      - name: Minify site
+        run: minify -r -o minified/ build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
           # Upload entire repository
-          path: './build'
+          path: './minified'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
