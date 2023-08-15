@@ -390,6 +390,50 @@
                 </section>
                 <hr>
                 <section class="fold">
+                    <input type="checkbox" name="collapse" id="foldable-libraries-ocaml">
+                    <h2>
+                        <label for="foldable-libraries-ocaml">Ocaml</label>
+                    </h2>
+                    <div>
+                        <p>
+                            To add <code>foxes</code> to your project you
+                            need to do
+                            <code>opam repository add foxes git+https://github.com/Foxes-cool/Opam-repository</code>
+                            and then do <code>opam install foxes</code>
+                            to install the library. Dont forget to add
+                            <code>foxes</code> as your dependency to
+                            your project.
+                        </p>
+                        <p>
+                            To use <code>foxes</code> anywhere in your code you
+                            can do <code>Foxes.{tag} []</code>, an
+                            example would be
+                            <code>Foxes.fox []</code>, to see all
+                            of the tags scroll down. This will return a URL like
+                            <code>https://img.foxes.cool/fox/0.jpg</code>
+                        </p>
+                        <p>
+                            To use the image manipulation you can add a function
+                            after your main function call, an example is
+                            <code>Foxes.fox [ Foxes.width 150; Foxes.height 150 ]</code>.
+                            This will return a link like
+                            <code>https://img.foxes.cool/fox/0.jpg?width=150&height=150</code>
+                            For details about what each of the following do is
+                            in the <b>Image Manipulation</b> section, here is
+                            how each of the following would be set:
+                            <ul>
+                                <li><code>Width</code> -
+                                <code>Foxes.width 150</code></li>
+                                <li><code>Height</code> -
+                                <code>Foxes.height 150</code></li>
+                                <li><code>Aspect ratio</code> -
+                                <code>Foxes.aspect_ratio "1:2"</code></li>
+                            </ul>
+                        </p>
+                    </div>
+                </section>
+                <hr>
+                <section class="fold">
                     <input type="checkbox" name="collapse" id="foldable-libraries-python">
                     <h2>
                         <label for="foldable-libraries-python">Python</label>
